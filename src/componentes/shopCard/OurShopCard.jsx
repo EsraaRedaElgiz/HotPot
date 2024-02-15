@@ -1,11 +1,12 @@
 import { Button, Typography } from "@mui/material";
 import styles from "./styles.module.css"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function ShopCard(props) {
 const {img,name,price}=props
 
     return (
         <div  className={styles.cardStyle}>
-            <img src={img} alt="Logo"  className={`${styles.imgStyle} ${styles.img}`} />
+            <LazyLoadImage src={img} alt="Logo"  className={`${styles.imgStyle} ${styles.img}`} />
             <Typography
                 variant="h5"
                 component="div"

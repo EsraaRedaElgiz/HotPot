@@ -1,5 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { animated, useInView } from '@react-spring/web'
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 function GroupImages(props) {
     const { textForFirstItem, firstItemImg, secondImgInfirstColumn, firstImgInSecondColumn, leftImgInSecondColumn, textButonInrightPartInSecondColumn, imgInrightPartInSecondColumn } = props
     const [ref1, springs1] = useInView(() => ({
@@ -37,7 +39,7 @@ function GroupImages(props) {
                             {textForFirstItem}
                         </Typography>
                         : firstItemImg ?
-                            <img
+                            <LazyLoadImage
                                 
                                 src={firstItemImg}
                                 alt="Logo"
@@ -47,20 +49,20 @@ function GroupImages(props) {
 
                 </animated.div>
                 <animated.div ref={ref2} style={{ ...springs2 }}>
-                    <img src={secondImgInfirstColumn}  alt="Logo" style={{ width: "100%", height: "400px", borderRadius: "20px" }} />
+                    <LazyLoadImage src={secondImgInfirstColumn}  alt="Logo" style={{ width: "100%", height: "400px", borderRadius: "20px" }} />
                 </animated.div>
             </Grid>
             <Grid item xs={12} sm={6} display="flex" flexDirection="column" justifyContent="space-between"  >
                 <Grid sx={{ display: { xs: "none", sm: "block" } }}>
                     <animated.div ref={ref3} style={{ ...springs3, marginBottom: "2%" }}>
 
-                        <img src={firstImgInSecondColumn} alt="Logo"  style={{ width: "100%", height: "400px", borderRadius: "20px" }} />
+                        <LazyLoadImage src={firstImgInSecondColumn} alt="Logo"  style={{ width: "100%", height: "400px", borderRadius: "20px" }} />
                     </animated.div>
                 </Grid>
                 <Grid container display="flex" direction="row" spacing={2}>
                     <Grid item xs={6} sm={6} >
                         <animated.div ref={ref4} style={{ ...springs4, marginBottom: "2%" }}>
-                            <img src={leftImgInSecondColumn}  alt="Logo" style={{ width: "100%", height: "150px", borderRadius: "20px" }} />
+                            <LazyLoadImage src={leftImgInSecondColumn}  alt="Logo" style={{ width: "100%", height: "150px", borderRadius: "20px" }} />
                         </animated.div>
                     </Grid>
                     <Grid item xs={6} sm={6}>
@@ -70,7 +72,7 @@ function GroupImages(props) {
                                     {textButonInrightPartInSecondColumn}
                                 </Button> :
                                 imgInrightPartInSecondColumn ?
-                                    <img  src={imgInrightPartInSecondColumn} style={{ width: "100%", height: "100%", borderRadius: "50%" }} /> :
+                                    <LazyLoadImage  src={imgInrightPartInSecondColumn} style={{ width: "100%", height: "100%", borderRadius: "50%" }} /> :
                                     null
                             }
 
