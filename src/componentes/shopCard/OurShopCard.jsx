@@ -20,7 +20,7 @@ const {img,name,price}=props
             >
                 {price}
             </Typography>
-            <Button  sx={{ backgroundColor: "#f58840", width: "70%" ,color:"#383838",fontWeight:"bold",":hover":{backgroundColor:"grey"}}}>Order</Button>
+            <Button  sx={{ backgroundColor: "#f58840", width: "70%" ,color:"#383838",fontWeight:"bold",textTransform:"none",":hover":{backgroundColor:"grey"}}}>Order</Button>
         </div>
     )
 }

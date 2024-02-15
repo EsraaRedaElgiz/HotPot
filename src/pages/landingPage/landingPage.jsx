@@ -23,7 +23,7 @@ function LandingPage(props) {
 
     return (
         <div>
-            <div style={{ height: "10vh", backgroundColor: "#383838" }} >
+            <div  >
                 <NavBar />
             </div>
             <div style={{
