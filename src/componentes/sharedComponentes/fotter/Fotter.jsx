@@ -42,7 +42,7 @@ function Fotter(props) {
                 </Typography>
             </Grid>
             <Grid item xs={3} sx={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }} >
-                <Button sx={{ width: "20%", height: "20%", borderRadius: "50%", border: "3px solid #f58840" }} onClick={handleClick}  >
+                <Button sx={{ width: "50px", height: "50px", borderRadius: "50%", border: "3px solid #f58840" }} onClick={handleClick}  >
                     <NorthIcon sx={{ color: "#f58840", fontSize: "inhert" }} />
                 </Button>
 

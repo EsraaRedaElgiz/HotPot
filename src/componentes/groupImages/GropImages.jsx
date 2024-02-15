@@ -25,6 +25,12 @@ function GroupImages(props) {
         to: { x: 0 },
 
     }))
+    const imgStyle={
+        width:"100%",
+        height:"100%",
+        borderRadius:"20px",
+        objectFit:"cover"
+    }
     return (
         <Grid container spacing={2}  >
             <Grid item xs={12} sm={6} display="flex" flexDirection="column">
@@ -39,40 +45,42 @@ function GroupImages(props) {
                             {textForFirstItem}
                         </Typography>
                         : firstItemImg ?
-                            <LazyLoadImage
-                                
-                                src={firstItemImg}
-                                alt="Logo"
-                                style={{ width: "100%", height: "150px", borderRadius: "20px" }} />
+                            <div style={{ width: "100%", height: "150px", borderRadius: "20px"}}>
+                                <LazyLoadImage
+
+                                    src={firstItemImg}
+                                    alt="Logo"
+                                    style={{ ...imgStyle}} />
+                            </div>
                             : null
                     }
 
                 </animated.div>
-                <animated.div ref={ref2} style={{ ...springs2 }}>
-                    <LazyLoadImage src={secondImgInfirstColumn}  alt="Logo" style={{ width: "100%", height: "400px", borderRadius: "20px" }} />
+                <animated.div ref={ref2} style={{ ...springs2,width: "100%", height: "400px", borderRadius: "20px" }}>
+                    <LazyLoadImage src={secondImgInfirstColumn} alt="Logo" style={{...imgStyle  }} />
                 </animated.div>
             </Grid>
             <Grid item xs={12} sm={6} display="flex" flexDirection="column" justifyContent="space-between"  >
                 <Grid sx={{ display: { xs: "none", sm: "block" } }}>
-                    <animated.div ref={ref3} style={{ ...springs3, marginBottom: "2%" }}>
+                    <animated.div ref={ref3} style={{ ...springs3, marginBottom: "2%", width: "100%", height: "400px", borderRadius: "20px" }}>
 
-                        <LazyLoadImage src={firstImgInSecondColumn} alt="Logo"  style={{ width: "100%", height: "400px", borderRadius: "20px" }} />
+                        <LazyLoadImage src={firstImgInSecondColumn} alt="Logo" style={{...imgStyle }} />
                     </animated.div>
                 </Grid>
                 <Grid container display="flex" direction="row" spacing={2}>
                     <Grid item xs={6} sm={6} >
-                        <animated.div ref={ref4} style={{ ...springs4, marginBottom: "2%" }}>
-                            <LazyLoadImage src={leftImgInSecondColumn}  alt="Logo" style={{ width: "100%", height: "150px", borderRadius: "20px" }} />
+                        <animated.div ref={ref4} style={{ ...springs4, marginBottom: "2%", width: "100%", height: "150px", borderRadius: "20px" }}>
+                            <LazyLoadImage src={leftImgInSecondColumn} alt="Logo" style={{ ...imgStyle}} />
                         </animated.div>
                     </Grid>
                     <Grid item xs={6} sm={6}>
-                        <animated.div ref={ref5} style={{ ...springs5, width: "65%", height: "150px" }}>
+                        <animated.div ref={ref5} style={{ ...springs5, width: "80%", height: "150px" }}>
                             {textButonInrightPartInSecondColumn ?
                                 <Button sx={{ width: "100%", height: "100%", borderRadius: "50%", border: "1px solid #66BB55", color: "#383838" }} >
                                     {textButonInrightPartInSecondColumn}
                                 </Button> :
                                 imgInrightPartInSecondColumn ?
-                                    <LazyLoadImage  src={imgInrightPartInSecondColumn} style={{ width: "100%", height: "100%", borderRadius: "50%" }} /> :
+                                    <LazyLoadImage src={imgInrightPartInSecondColumn} style={{ ...imgStyle, borderRadius: "50%" }} /> :
                                     null
                             }
 

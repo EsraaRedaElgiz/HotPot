@@ -7,7 +7,9 @@ function ReviewCard(props) {
 const {img,name,review}=props
     return (
         <div  className={styles.reviewCardContainer}>
-            <LazyLoadImage src={img} className={globalImg.img} alt="Logo" style={{ width: "80%",height:"200px", borderRadius: "50%" }} />
+        <div style={{width: "80%",height:"200px", borderRadius: "50%"}}>
+            <LazyLoadImage src={img} className={globalImg.img} alt="Logo" style={{width:"100%",height:"100%",borderRadius:"100%"  }} />
+            </div>
             <Typography
                 variant="h5"
                 fontWeight="bold"
