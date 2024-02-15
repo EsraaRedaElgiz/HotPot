@@ -1,0 +1,4 @@
+.iconsContainer{
+    display: flex ; 
+    flex-direction: row ;
+}
