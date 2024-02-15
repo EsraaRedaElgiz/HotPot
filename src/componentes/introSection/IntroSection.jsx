@@ -1,18 +1,24 @@
 import { Button, Grid, Typography } from '@mui/material';
 
 function IntroSection() {
+    const textStyle = {
+        flexGrow: 1,
+        color: "#fff",
+        display: 'block', 
+        mb: 1
+    }
     return (
         < >
 
             <Typography
                 variant="h2"
                 component="div"
-                sx={{ flexGrow: 1, color: "#fff", display: 'block', mb: 1 }}
+                sx={{ ...textStyle }}
             >
                 High Quality Spices
                 <Typography variant="h2"
                     component="div"
-                    sx={{ flexGrow: 1, color: "#fff", display: { xs: "none", sm: 'block' }, mb: 1 }}>
+                    sx={{...textStyle ,display: { xs: "none", sm: 'block' } }}>
                     For Our Dish
                 </Typography>
             </Typography>
@@ -21,7 +27,7 @@ function IntroSection() {
                     <Typography
                         variant="subtitle1"
                         component="span"
-                        sx={{ flexGrow: 1, color: "#fff", display: 'inline', mb: 1 }}
+                        sx={{  ...textStyle,display: 'inline' }}
                     >
                         only the Highst quality varites are collected from <br></br>the best plantation in the world
                     </Typography>

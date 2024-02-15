@@ -1,4 +1,4 @@
-import {  Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import about1 from '../../assets/about1.jpg'
 import about2 from '../../assets/about2.jpg'
 import a5 from "../../assets/a5.jpg"
@@ -6,12 +6,14 @@ import GroupImages from "../groupImages/GropImages";
 import styles from "./styles.module.css"
 
 function AboutUs() {
-   
+    const sectionHeader = {
+        flexGrow: 1, color: "#383838", display: { xs: "block" }, mb: 2
+    }
     return (
         <div className={styles.containerItems} >
             <Typography variant="h3"
                 component="div"
-                sx={{ flexGrow: 1, color: "#383838", display: { xs: "block" }, mb: 2 }}>
+                sx={{ ...sectionHeader }}>
                 About Us
             </Typography>
 
